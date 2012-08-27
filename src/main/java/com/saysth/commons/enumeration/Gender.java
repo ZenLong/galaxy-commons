@@ -35,9 +35,9 @@ public enum Gender {
 	public static void cache(Map<Enum, String> cache) {
 		Assert.notNull(cache);
 		Gender.cache = cache;
-		Gender[] enums = Gender.values();
-		for (Gender gender : enums)
-			Gender.cache.put(gender, gender.getLabel());
+		Gender[] enums = values();
+		for (Gender entry : enums)
+			Gender.cache.put(entry, entry.getLabel());
 	}
 
 	// 获取存放缓存
